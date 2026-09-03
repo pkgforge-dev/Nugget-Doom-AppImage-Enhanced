@@ -9,7 +9,6 @@ echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
     cmake      \
     fluidsynth \
-    sdl2       \
     sdl2_net
 
 echo "Installing debloated packages..."
