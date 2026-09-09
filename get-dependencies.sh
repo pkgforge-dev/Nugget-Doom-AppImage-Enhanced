@@ -6,10 +6,7 @@ ARCH=$(uname -m)
 
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
-pacman -Syu --noconfirm \
-    cmake      \
-    fluidsynth \
-    sdl2_net
+pacman -Syu --noconfirm cmake fluidsynth sdl2_net
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
