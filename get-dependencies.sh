@@ -6,7 +6,13 @@ ARCH=$(uname -m)
 
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
-pacman -Syu --noconfirm cmake fluidsynth hicolor-icon-theme libebur128 openal sdl2_net
+pacman -Syu --noconfirm \
+     cmake              \
+     fluidsynth         \
+     hicolor-icon-theme \
+     libebur128         \
+     openal             \
+     sdl2_net
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
