@@ -6,16 +6,12 @@ ARCH=$(uname -m)
 
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
-pacman -Syu --noconfirm alsa-lib cmake fluidsynth hicolor-icon-theme openal sdl2_net libsndfile libebur128
+pacman -Syu --noconfirm cmake fluidsynth hicolor-icon-theme libebur128 openal sdl2_net
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano libdecor-mini
 
-# Comment this out if you need an AUR package
-#make-aur-package nugget-doom
-
-# If the application needs to be manually built that has to be done down here
 echo "Building stable version of Nugget Doom..."
 echo "---------------------------------------------------------------"
 REPO="https://github.com/MrAlaux/Nugget-Doom"
