@@ -26,8 +26,6 @@ VERSION="$(echo "$TAG" | sed 's/^nugget-doom-//')"
 git clone --depth 1 --branch "$TAG" "$REPO" ./Nugget-Doom
 echo "$VERSION" > ~/version
 
-cmake -B build -S ./Nugget-Doom \
-        -DCMAKE_BUILD_TYPE=Release \
-        -DCMAKE_INSTALL_PREFIX=/usr
+cmake -S ./Nugget-Doom -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr
 cmake --build build -j$(nproc)
 cmake --install build
